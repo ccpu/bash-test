@@ -1,14 +1,10 @@
 #!/bin/bash
 
 
-read -p "Do you want to proceed? (yes/no) " yn
-
-case $yn in
-	yes ) echo ok, we will proceed;;
-	no ) echo exiting...;
-		exit;;
-	* ) echo invalid response;
-		exit 1;;
-esac
-
-echo doing stuff...
+read -r -p "Are you sure? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+    do_something
+else
+    do_something_else
+fi
