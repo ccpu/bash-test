@@ -1,9 +1,14 @@
 #!/bin/bash
 
 
-read -p "Are you sure? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-    exit 1
-fi
+read -p "Do you want to proceed? (yes/no) " yn
+
+case $yn in
+	yes ) echo ok, we will proceed;;
+	no ) echo exiting...;
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac
+
+echo doing stuff...
