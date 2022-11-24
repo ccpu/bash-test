@@ -4,7 +4,7 @@
 read -r -p "Are you sure? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-    do_something
+    echo "y"
 else
-    do_something_else
+   echo "n"
 fi
