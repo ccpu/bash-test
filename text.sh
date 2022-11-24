@@ -1,4 +1,4 @@
 #!/bin/bash
 
-
-echo "hi"
+printf 'press [ENTER] to continue deleting...'
+read _
